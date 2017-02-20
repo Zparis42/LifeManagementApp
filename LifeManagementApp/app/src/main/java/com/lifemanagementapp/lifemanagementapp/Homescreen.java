@@ -23,7 +23,7 @@ public class Homescreen extends AppCompatActivity {
         setContentView(R.layout.activity_homescreen);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        mDrawerList = (ListView)findViewById(R.id.navList);
+        //mDrawerList = (ListView)findViewById(R.id.navList);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);

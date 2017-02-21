@@ -17,46 +17,38 @@ import android.widget.ListView;
 
 public class Homescreen extends AppCompatActivity {
 
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mDrawerToggle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homescreen);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
-        //mDrawerList = (ListView)findViewById(R.id.navList);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.nav_drawer);
+        mDrawerToggle = new ActionBarDrawerToggle( this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close );
+        mDrawerLayout.setDrawerListener( mDrawerToggle );
+        mDrawerToggle.syncState();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-        mActivityTitle = getTitle().toString();
-
-        Button test = (Button)findViewById(R.id.test);
-        test.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(Homescreen.this, Navigation.class));
-            }
-        });
-
-
     }
-
-    private ListView mDrawerList;
-    private DrawerLayout mDrawerLayout;
-    private String mActivityTitle;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_homescreen, menu);
+        //getMenuInflater().inflate(R.menu.menu_homescreen, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected( MenuItem item) {
-        return true;
+    public boolean onOptionsItemSelected( MenuItem item ) {
+        if(mDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        else {
+            return true;
+        }
     }
 
-    public void openNavigation(View view) {
-        Intent intent = new Intent(this, Navigation.class);
-        startActivity(intent);
-    }
 }

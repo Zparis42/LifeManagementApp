@@ -6,4 +6,8 @@
     <string name="action_favorite">Favorite</string>
     <string name="drawer_open">Opened</string>
     <string name="drawer_close">Closed</string>
+    <string name="action_calendar">Calendar</string>
+    <string name="action_budget">Budget</string>
+    <string name="action_health">Health</string>
+
 </resources>

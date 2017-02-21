@@ -3,13 +3,6 @@
     xmlns:android.support.v7.appcompat="http://schemas.android.com/tools"
     android.support.v7.appcompat:navigationIcon="@mipmap/ic_menu_black_24dp">
 
-    <!-- "Mark Favorite", should appear as action button if possible -->
-    <item
-        android:id="@+id/action_favorite"
-        android:icon="@mipmap/ic_launcher"
-        android:title="@string/action_favorite"
-        app:showAsAction="ifRoom"/>
-
     <!-- Settings, should always be in the overflow -->
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"

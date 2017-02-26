@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android.support.v7.appcompat="http://schemas.android.com/tools"
+    android.support.v7.appcompat:navigationIcon="@mipmap/ic_menu_black_24dp">
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never"
+        android:onClick="onNavMenuItemClick" />
+
+</menu>

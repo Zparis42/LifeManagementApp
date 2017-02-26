@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android.support.v7.appcompat="http://schemas.android.com/tools" >
+
+    <item
+        android:id="@+id/action_calendar"
+        android:icon="@mipmap/ic_launcher"
+        android:title="@string/action_calendar"
+        android:onClick="onNavMenuItemClick" />
+
+    <item android:id="@+id/action_health"
+          android:title="@string/action_health"
+          android:icon="@mipmap/ic_launcher"
+          android:onClick="onNavMenuItemClick" />
+
+    <item android:id="@+id/action_budget"
+          android:title="@string/action_budget"
+          android:icon="@mipmap/ic_launcher"
+          android:onClick="onNavMenuItemClick" />
+
+    <item android:id="@+id/action_goals"
+          android:title="@string/action_goals"
+          android:icon="@mipmap/ic_launcher"
+          android:onClick="onNavMenuItemClick" />
+
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          android:icon="@mipmap/ic_launcher"
+          android:onClick="onNavMenuItemClick" />
+
+</menu>

@@ -62,4 +62,11 @@ public class Homescreen extends AppCompatActivity {
         }
     }
 
+    public void betanav(View v) {
+
+        Intent intent = new Intent(this, Schedule_form.class);
+        startActivity(intent);
+
+    }
+
 }

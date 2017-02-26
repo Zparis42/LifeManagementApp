@@ -9,5 +9,12 @@
     <string name="action_calendar">Calendar</string>
     <string name="action_budget">Budget</string>
     <string name="action_health">Health</string>
+    <string name="title_activity_schedule_form">Schedule_form</string>
 
+    // Strings for event form
+    <string name="event_name">Event Name</string>
+    <string name="set_time">Set Time</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

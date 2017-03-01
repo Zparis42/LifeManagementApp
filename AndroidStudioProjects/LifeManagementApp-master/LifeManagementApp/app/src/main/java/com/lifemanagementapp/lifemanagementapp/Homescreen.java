@@ -81,6 +81,11 @@ public class Homescreen extends AppCompatActivity {
         }
     }
 
+    public void notification( ) {
+        Notifications n = new Notifications( );
+        n.addNotification( );
+    }
+
     // Starts Activity based on whatever menu item is selected from navigation drawer
     public void onNavMenuItemClick( MenuItem item ) {
 

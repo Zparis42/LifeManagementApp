@@ -1,9 +1,12 @@
 package com.lifemanagementapp.lifemanagementapp;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -79,6 +82,30 @@ public class Homescreen extends AppCompatActivity {
         else {
             return true;
         }
+    }
+
+    // Puts notification on the notification drawer, each Activity will need to have its own addNotification( ) method
+    public void addNotification( View view ) {
+
+        // These three are NECESSARY for each notification, do not delete
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
+                // Icon for the notification
+                .setSmallIcon(R.mipmap.ic_launcher)
+                // Title of notification
+                .setContentTitle("Test notification")
+                // Text displayed under the title
+                .setContentText("Finally working");
+
+        Intent intent = new Intent(this, Homescreen.class);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        notificationBuilder.setContentIntent( pendingIntent );
+
+        NotificationManager notificationManager = ( NotificationManager ) getSystemService( NOTIFICATION_SERVICE );
+
+        notificationManager.notify(0, notificationBuilder.build());
+
     }
 
     // Starts Activity based on whatever menu item is selected from navigation drawer

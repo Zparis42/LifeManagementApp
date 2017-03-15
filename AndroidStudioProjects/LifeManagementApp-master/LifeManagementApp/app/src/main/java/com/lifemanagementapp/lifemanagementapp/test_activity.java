@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
+// Delete this class after implementation
 public class test_activity extends ActionBarActivity {
 
     @Override

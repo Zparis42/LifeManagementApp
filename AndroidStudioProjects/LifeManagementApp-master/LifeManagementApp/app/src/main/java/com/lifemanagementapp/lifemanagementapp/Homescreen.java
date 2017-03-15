@@ -89,8 +89,11 @@ public class Homescreen extends AppCompatActivity {
 
         // These three are NECESSARY for each notification, do not delete
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
+                // Icon for the notification
                 .setSmallIcon(R.mipmap.ic_launcher)
+                // Title of notification
                 .setContentTitle("Test notification")
+                // Text displayed under the title
                 .setContentText("Finally working");
 
         Intent intent = new Intent(this, Homescreen.class);

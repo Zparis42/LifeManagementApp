@@ -27,7 +27,7 @@
             android:id="@+id/notifyButton"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:onClick="notification"/>
+            android:onClick="addNotification"/>
 
 
     </RelativeLayout>

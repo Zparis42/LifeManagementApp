@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class Schedule_form extends AppCompatActivity{
+public class Schedule_form extends AppCompatActivity implements TimePickerFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +41,15 @@ public class Schedule_form extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
     }
 
+    // When the "set time" button is pressed, this method brings up the time picker
     public void showTimePickerDialog(View v) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
+    }
+
+    @Override
+    // When the time is set in the picker, this method will be called
+    public void onFragmentInteraction(int hour, int minute) {
+        // TODO: Add method body
     }
 }

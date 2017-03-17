@@ -26,6 +26,8 @@ import java.util.Calendar;
  * Use the {@link TimePickerFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
+// NOTE: I don't know what most of this does, I used a template to create this.
 public class TimePickerFragment extends DialogFragment
         implements TimePickerDialog.OnTimeSetListener  {
     // TODO: Rename parameter arguments, choose names that match
@@ -38,6 +40,10 @@ public class TimePickerFragment extends DialogFragment
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private int hour;
+    private int minute;
+
 
     /**
      * Use this factory method to create a new instance of
@@ -58,8 +64,10 @@ public class TimePickerFragment extends DialogFragment
     }
 
     // TODO: Update this
+    // When the time is set, send info back to form through onFragmentInteraction
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         // Do something with the time chosen by the user
+        mListener.onFragmentInteraction(hourOfDay, minute);
     }
 
     public TimePickerFragment() {
@@ -89,7 +97,7 @@ public class TimePickerFragment extends DialogFragment
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onFragmentInteraction(-1, -1);
         }
     }
 
@@ -122,7 +130,7 @@ public class TimePickerFragment extends DialogFragment
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+        public void onFragmentInteraction(int hour, int minute);
     }
 
 }

@@ -9,17 +9,13 @@
     tools:context="com.lifemanagementapp.lifemanagementapp.Schedule_form"
     android:orientation="vertical">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+    <!-- Field for user to enter event name -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/event_name" />
 
+    <!-- Button that brings up a time picker for the user to select the time of the event -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

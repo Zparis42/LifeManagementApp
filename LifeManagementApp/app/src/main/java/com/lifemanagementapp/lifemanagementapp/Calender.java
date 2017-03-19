@@ -29,12 +29,12 @@ public class Calender extends ActionBarActivity {
         calendarView.setClickable(true);
         ExpandableListView mExpandableListView = (ExpandableListView)findViewById(R.id.action_calendar_event);
         //mExpandableListView.expandGroup(groupPosition);
-        calendarView.setOnDateChangeListener(new OnDateChangeListener(){
+        calendarView.setOnDateChangeListener(new OnDateChangeListener(){ // Event add to listen for date click
             @Override
             public void onSelectedDayChange(CalendarView view, int year,
                                             int month, int dayOfMonth) {
                 long pressTime = System.currentTimeMillis();
-                if (pressTime - lastPressTime <= double_Click_Time) {
+                if (pressTime - lastPressTime <= double_Click_Time) { // checks the time between last click and current click
                     String message = "Double Click";
                     Toast.makeText(getApplicationContext(), message,
                             Toast.LENGTH_LONG).show();

@@ -15,11 +15,27 @@
         android:layout_height="wrap_content"
         android:hint="@string/event_name" />
 
-    <!-- Button that brings up a time picker for the user to select the time of the event -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/set_time"
-        android:onClick="showTimePickerDialog" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Button that brings up a date picker for the user to select the date of the event -->
+        <Button
+            android:id="@+id/dateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Set Date"
+            android:onClick="showDatePickerDialog" />
+
+        <!-- Button that brings up a time picker for the user to select the time of the event -->
+        <Button
+            android:id="@+id/timeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/set_time"
+            android:onClick="showTimePickerDialog" />
+    </RelativeLayout>
 
 </LinearLayout>

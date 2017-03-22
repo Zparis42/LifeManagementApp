@@ -118,6 +118,11 @@ public class Health extends AppCompatActivity {
         }
     }
 
+    public void newMedication( View view ) {
+        Intent newMed = new Intent( Health.this, Health_Form.class );
+        startActivity( newMed );
+    }
+
     // Inflate the menu; this adds items to the action bar if it is present
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

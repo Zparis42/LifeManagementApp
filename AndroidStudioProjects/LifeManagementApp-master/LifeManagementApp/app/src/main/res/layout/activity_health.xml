@@ -20,6 +20,15 @@
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Form Test"
+            android:id="@+id/button_med"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="newMedication"/>
+
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView

@@ -118,25 +118,22 @@ public class Health extends AppCompatActivity {
         }
     }
 
+    // Inflate the menu; this adds items to the action bar if it is present
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_health, menu);
+        getMenuInflater().inflate(R.menu.menu_homescreen, menu);
         return true;
     }
 
+    // Opens navigation drawer if navigation button is clicked
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public boolean onOptionsItemSelected( MenuItem item ) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if(mDrawerToggle.onOptionsItemSelected(item)){
             return true;
         }
-
-        return super.onOptionsItemSelected(item);
+        else {
+            return true;
+        }
     }
 }

@@ -1,14 +1,27 @@
 package com.lifemanagementapp.lifemanagementapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.EditText;
 
 
 public class Health_Form extends AppCompatActivity {
+
+    public void submit( View view ) {
+
+        EditText name = (EditText) findViewById( R.id.editTextName );
+        EditText desc = (EditText) findViewById( R.id.editTextDesc );
+
+        Intent intent = new Intent( view.getContext( ), Health.class );
+        startActivity( intent );
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +32,11 @@ public class Health_Form extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById( R.id.my_toolbar );
         setSupportActionBar( toolbar );
 
-        getSupportActionBar( ).setDisplayHomeAsUpEnabled( true );
-        getSupportActionBar( ).setDisplayShowHomeEnabled( true );
+        getSupportActionBar( ).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar( ).setDisplayShowHomeEnabled(true);
+
+        // Sets the title on the toolbar
+        getSupportActionBar().setTitle( "New Medication" );
 
     }
 

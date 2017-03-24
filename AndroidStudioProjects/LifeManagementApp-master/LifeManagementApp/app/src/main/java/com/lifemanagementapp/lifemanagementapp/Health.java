@@ -22,6 +22,23 @@ public class Health extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private NavigationView mNavigationView;
 
+    public medNode[] medList;
+
+    public class medNode {
+
+        private String name;
+        private String desc;
+
+        private String getName( ) {
+            return name;
+        }
+
+        private String getDesc( ) {
+            return desc;
+        }
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +58,7 @@ public class Health extends AppCompatActivity {
         mNavigationView.setItemIconTintList(null);
 
         // Enables the navigation button on the toolbar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled( true );
     }
 
     private void selectItem(int position) {

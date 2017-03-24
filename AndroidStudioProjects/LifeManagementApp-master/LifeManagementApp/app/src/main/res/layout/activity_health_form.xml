@@ -15,5 +15,69 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medication Name"
+        android:id="@+id/newMedName"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextName"
+        android:layout_below="@+id/newMedName"
+        android:layout_alignLeft="@+id/newMedName"
+        android:layout_alignStart="@+id/newMedName"
+        android:layout_alignRight="@+id/newMedName"
+        android:layout_alignEnd="@+id/newMedName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:id="@+id/newMedDesc"
+        android:layout_above="@+id/editTextDesc"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editTextDesc"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editTextTime"
+        android:layout_alignStart="@+id/editTextTime" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:id="@+id/newMedTime"
+        android:layout_below="@+id/editTextDesc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/editTextTime"
+        android:layout_below="@+id/newMedTime"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/newMedSubmit"
+        android:layout_below="@+id/editTextTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
+
 
 </RelativeLayout>

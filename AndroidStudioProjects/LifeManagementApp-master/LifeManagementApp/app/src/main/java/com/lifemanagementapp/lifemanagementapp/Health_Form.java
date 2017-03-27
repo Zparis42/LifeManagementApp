@@ -19,7 +19,10 @@ public class Health_Form extends AppCompatActivity {
         EditText desc = (EditText) findViewById( R.id.editTextDesc );
 
         Intent intent = new Intent( view.getContext( ), Health.class );
+        intent.putExtra( "name", name.getText( ) );
+        intent.putExtra( "desc", desc.getText( ) );
         startActivity( intent );
+        finish( );
 
     }
 

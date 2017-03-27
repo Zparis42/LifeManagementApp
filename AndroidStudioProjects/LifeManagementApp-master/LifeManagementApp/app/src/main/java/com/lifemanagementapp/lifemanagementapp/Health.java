@@ -61,19 +61,6 @@ public class Health extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
     }
 
-    private void selectItem(int position) {
-        switch(position) {
-            case 1:
-                Intent a = new Intent(Health.this, test_activity.class);
-                startActivity(a);
-                break;
-            case 2:
-                Intent b = new Intent(Health.this, test_activity.class);
-                startActivity(b);
-                break;
-            default:
-        }
-    }
 
     // Puts notification on the notification drawer, each Activity will need to have its own addNotification( ) method
     public void addNotification( View view ) {
@@ -82,9 +69,9 @@ public class Health extends AppCompatActivity {
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 // Icon for the notification
                 .setSmallIcon(R.mipmap.ic_launcher)
-                        // Title of notification
+                // Title of notification
                 .setContentTitle("Test notification")
-                        // Text displayed under the title
+                // Text displayed under the title
                 .setContentText("Finally working");
 
         Intent intent = new Intent(this, Homescreen.class);
@@ -138,6 +125,7 @@ public class Health extends AppCompatActivity {
     public void newMedication( View view ) {
         Intent newMed = new Intent( Health.this, Health_Form.class );
         startActivity( newMed );
+        //finish();
     }
 
     // Inflate the menu; this adds items to the action bar if it is present

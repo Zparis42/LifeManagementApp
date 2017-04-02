@@ -89,26 +89,31 @@ public class Homescreen extends AppCompatActivity {
                 Intent a = new Intent( Homescreen.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( a );
                 mDrawerLayout.closeDrawer( mNavigationView );
+                break;
 
             case R.id.action_health:
                 Intent b = new Intent( Homescreen.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( b );
                 mDrawerLayout.closeDrawer( mNavigationView );
+                break;
 
             case R.id.action_budget:
                 Intent c = new Intent( Homescreen.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( c );
                 mDrawerLayout.closeDrawer( mNavigationView );
+                break;
 
             case R.id.action_goals:
                 Intent d = new Intent( Homescreen.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( d );
                 mDrawerLayout.closeDrawer( mNavigationView );
+                break;
 
             case R.id.action_settings:
                 Intent e = new Intent( Homescreen.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( e );
                 mDrawerLayout.closeDrawer( mNavigationView );
+                break;
         }
     }
 }

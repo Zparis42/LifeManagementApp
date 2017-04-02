@@ -24,6 +24,14 @@
             android:name=".Calender"
             android:label="@string/title_activity_calendar" >
         </activity>
+        <activity
+            android:name=".Budget"
+            android:label="@string/title_activity_budget" >
+        </activity>
+        <activity
+            android:name=".Budget_Output"
+            android:label="@string/title_activity_budget_output" >
+        </activity>
 
     </application>
 

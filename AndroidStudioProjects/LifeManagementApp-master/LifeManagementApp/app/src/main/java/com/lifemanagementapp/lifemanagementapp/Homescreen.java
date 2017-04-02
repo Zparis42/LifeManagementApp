@@ -125,7 +125,7 @@ public class Homescreen extends AppCompatActivity {
                 break;
 
             case R.id.action_budget:
-                Intent c = new Intent( Homescreen.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent c = new Intent( Homescreen.this, Budget.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( c );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;

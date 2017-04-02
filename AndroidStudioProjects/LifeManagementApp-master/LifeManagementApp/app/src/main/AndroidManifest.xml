@@ -20,6 +20,11 @@
             android:name=".test_activity"
             android:label="@string/title_activity_test_activity" >
         </activity>
+        <activity
+            android:name=".Calender"
+            android:label="@string/title_activity_calendar" >
+        </activity>
+
     </application>
 
 </manifest>

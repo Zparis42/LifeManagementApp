@@ -140,6 +140,8 @@ public class Schedule_form extends AppCompatActivity implements TimePickerFragme
         System.out.println(cursor.getInt(cursor.getColumnIndexOrThrow(EventDataContract.EventEntry.COLUMN_NAME_END_HOUR)));
         System.out.println(cursor.getInt(cursor.getColumnIndexOrThrow(EventDataContract.EventEntry.COLUMN_NAME_END_MINUTE)));
         cursor.close();
+
+        finish();
     }
 
 

@@ -3,6 +3,8 @@ package com.lifemanagementapp.lifemanagementapp;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,6 +17,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
 
 public class Health extends AppCompatActivity {
 
@@ -22,12 +28,17 @@ public class Health extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private NavigationView mNavigationView;
 
-    public medNode[] medList;
+    public ArrayList<MedNode> medList = new ArrayList<MedNode>( );
 
-    public class medNode {
+    public class MedNode {
 
         private String name;
         private String desc;
+
+        public MedNode( String newName, String newDesc ) {
+            name = newName;
+            desc = newDesc;
+        }
 
         private String getName( ) {
             return name;
@@ -51,14 +62,25 @@ public class Health extends AppCompatActivity {
         mNavigationView = (NavigationView) findViewById( R.id.nav_view );
         mDrawerLayout = (DrawerLayout) findViewById( R.id.nav_drawer );
         mDrawerToggle = new ActionBarDrawerToggle( this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close );
-        mDrawerLayout.setDrawerListener( mDrawerToggle );
-        mDrawerToggle.syncState( );
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        mDrawerToggle.syncState();
 
         // Removes tint from menu items
         mNavigationView.setItemIconTintList(null);
 
         // Enables the navigation button on the toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled( true );
+
+        // Populates medList with data from sharedPreferences
+
+
+        // Adds to medList when the activity starts
+        Intent in = getIntent();
+        if( in != null ) {
+            String name = in.getStringExtra( "name" );
+            String desc = in.getStringExtra( "desc" );
+            medList.add( new MedNode( name, desc ) );
+        }
     }
 
 
@@ -145,5 +167,19 @@ public class Health extends AppCompatActivity {
         else {
             return true;
         }
+    }
+
+    // Saves data from medList to SharedPreferences
+    public boolean saveList( ) {
+        SharedPreferences shared = PreferenceManager.getDefaultSharedPreferences( this );
+        SharedPreferences.Editor edit = shared.edit( );
+
+        // Adds size to shared prefs
+        edit.putInt( "list_size", medList.size( ) );
+        for( int i = 0; i < medList.size( ); i++ ) {
+            edit.remove( "list_" + i );
+           // edit.putString("list_" + i, medList.get( i ) );
+        }
+        return true;
     }
 }

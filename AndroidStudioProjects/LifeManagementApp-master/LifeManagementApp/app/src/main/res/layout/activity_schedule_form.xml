@@ -1,0 +1,95 @@
+<!-- Zac's event form layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.lifemanagementapp.lifemanagementapp.Schedule_form"
+    android:orientation="vertical">
+
+    <!-- Field for user to enter event name -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/event_name"
+        android:id="@+id/eventName"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Time"
+        android:textSize="20dp"
+        android:paddingTop="10dp"/>
+
+    <!-- Start time buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Button that brings up a date picker for the user to select the date of the event -->
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".6"
+        android:layout_alignParentLeft="true"
+        android:text="Set Date"
+        android:onClick="showDatePickerDialog" />
+
+    <!-- Button that brings up a time picker for the user to select the time of the event -->
+        <Button
+        android:id="@+id/timeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".4"
+        android:layout_alignParentRight="true"
+        android:text="@string/set_time"
+        android:onClick="showTimePickerDialog" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="End Time"
+        android:textSize="20dp"
+        android:paddingTop="10dp"/>
+
+    <!-- End time buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Button that brings up a date picker for the user to select the date of the event -->
+        <Button
+            android:id="@+id/dateEndButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:layout_alignParentLeft="true"
+            android:text="Set Date"
+            android:onClick="showDateEndPickerDialog" />
+
+        <!-- Button that brings up a time picker for the user to select the time of the event -->
+        <Button
+            android:id="@+id/timeEndButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:layout_alignParentRight="true"
+            android:text="@string/set_time"
+            android:onClick="showTimeEndPickerDialog" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitButton"
+        android:layout_alignParentLeft="true"
+        android:text="Submit"
+        android:onClick="formSubmit"
+        />
+
+</LinearLayout>

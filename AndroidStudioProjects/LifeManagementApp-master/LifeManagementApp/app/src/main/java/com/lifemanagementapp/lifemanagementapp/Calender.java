@@ -7,6 +7,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -43,7 +44,7 @@ public class Calender extends ActionBarActivity {
         setContentView(R.layout.activity_calender);
         /*Get elements of views*/
         final RelativeLayout overlay = (RelativeLayout)findViewById(R.id.overlay_menu);
-        final CalendarView calendarView=(CalendarView)findViewById(R.id.action_calendar);
+        //final CalendarView calendarView=(CalendarView)findViewById(R.id.action_calendar);
         textfield  = (EditText)findViewById(R.id.editText);
         addEvent = (Button)findViewById(R.id.overlay_button);
         //ExpandableListView mExpandableListView = (ExpandableListView)findViewById(R.id.action_calendar_event);
@@ -84,7 +85,7 @@ public class Calender extends ActionBarActivity {
         };
         /* Listener end*/
         overlay.setVisibility(View.INVISIBLE); //set over lay to invisible
-        calendarView.setClickable(true);
+        //calendarView.setClickable(true);
 
         caldroidFragment.setCaldroidListener(listener);
         Bundle args = new Bundle();
@@ -95,7 +96,8 @@ public class Calender extends ActionBarActivity {
 
         caldroidFragment.setArguments(args);
 
-        android.support.v4.app.FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+        FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+        t.addToBackStack("caldroid");
         t.replace(R.id.action_calendar, caldroidFragment);
         t.commit();
         Button caladdEvent = (Button)findViewById(R.id.cal_add_event);
@@ -174,5 +176,9 @@ public class Calender extends ActionBarActivity {
     {
         fragment.setBackgroundDrawableForDate(ResourcesCompat.getDrawable(getResources(), R.drawable.calendar_next_arrow, null),date);
         fragment.refreshView();
+    }
+    public void displayVoid()
+    {
+
     }
 }

@@ -16,14 +16,18 @@
         android:background="#D3D3D3"
         android:layout_weight="0.25">
 
-    <CalendarView android:id="@+id/action_calendar"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent" />
+        <LinearLayout
+            android:id="@+id/action_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            </LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Event"
         android:id="@+id/cal_add_event"
+        android:layout_below="@id/action_calendar"
         android:layout_marginBottom="126dp"
         android:layout_alignRight="@+id/action_calendar"
         android:layout_alignEnd="@+id/action_calendar" />

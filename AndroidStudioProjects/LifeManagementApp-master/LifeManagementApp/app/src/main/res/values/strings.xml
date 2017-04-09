@@ -16,4 +16,9 @@
     <string name="title_activity_budget">Budget_Form</string>
     <string name="title_activity_budget_output">Budget_Output</string>
 
+    // Strings for event form
+    <string name="event_name">Event Name</string>
+    <string name="set_time">Set Time</string>
+    <string name="title_activity_schedule_form">Schedule Form</string>
+
 </resources>

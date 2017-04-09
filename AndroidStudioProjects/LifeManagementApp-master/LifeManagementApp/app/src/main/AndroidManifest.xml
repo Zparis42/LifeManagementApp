@@ -42,6 +42,11 @@
             android:name=".Budget_Output"
             android:label="@string/title_activity_budget_output" >
         </activity>
+        <activity
+            android:name=".Schedule_form"
+            android:label="@string/title_activity_schedule_form" >
+        </activity>
+
     </application>
 
 </manifest>

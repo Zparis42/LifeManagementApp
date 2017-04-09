@@ -170,6 +170,15 @@ public class Budget extends AppCompatActivity{
             case R.id.action_settings:
                 Intent e = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( e );
+
+            //
+            //
+            //
+            // Debug, remove before shipping
+            case R.id.action_debug_event_form:
+                Intent f = new Intent( Budget.this, Schedule_form.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity( f );
+
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
         }

@@ -28,4 +28,12 @@
           android:icon="@mipmap/ic_settings_black_24dp"
           android:onClick="onNavMenuItemClick" />
 
+    <!-- Debug, remove before shipping
+
+    -->
+    <item android:id="@+id/action_debug_event_form"
+        android:title="DEBUG: Schedule Form"
+        android:icon="@mipmap/ic_launcher"
+        android:onClick="onNavMenuItemClick" />
+
 </menu>

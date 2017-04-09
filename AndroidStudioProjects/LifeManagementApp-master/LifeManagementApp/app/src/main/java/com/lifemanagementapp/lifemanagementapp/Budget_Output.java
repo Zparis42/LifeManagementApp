@@ -38,10 +38,10 @@ public class Budget_Output extends AppCompatActivity {
     Integer dietvalue;
     Integer householdvalue;
     Integer recreationvalue;
-    Integer guarenteedvalue;
-    Integer incomevalue;
+    Float guarenteedvalue;
+    Float incomevalue;
 
-    int newbudget;
+    float newbudget;
 
     double adaptedhealth;
     double adaptedentertainment;
@@ -83,21 +83,16 @@ public class Budget_Output extends AppCompatActivity {
         // Enables the navigation button on the toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        //all of the below takes the user input from the previous form and
+        //sets then to "useable" variables here
         Intent mine = getIntent();
         healthvalue = mine.getIntExtra("health", 12);
         entertainmentvalue = mine.getIntExtra("entertainment", 12);
         dietvalue = mine.getIntExtra("diet", 12);
         householdvalue = mine.getIntExtra("household", 12);
         recreationvalue = mine.getIntExtra("recreation", 12);
-        guarenteedvalue = mine.getIntExtra("guarenteed", 12);
-        incomevalue = mine.getIntExtra("income", 12);
-        System.out.println("health is " + healthvalue);
-        System.out.println("entertainment is " + entertainmentvalue);
-        System.out.println("diet is " + dietvalue);
-        System.out.println("household is " + householdvalue);
-        System.out.println("recreation is " + recreationvalue);
-        System.out.println("guarenteed is " + guarenteedvalue);
+        guarenteedvalue = mine.getFloatExtra("guarenteed", 12);
+        incomevalue = mine.getFloatExtra("income", 12);
 
 
         newbudget = (incomevalue - guarenteedvalue);
@@ -116,23 +111,22 @@ public class Budget_Output extends AppCompatActivity {
         adaptedguarenteed = (guarenteedvalue);
         //System.out.println("adapted guarenteed is " + adaptedguarenteed);
 
+        //assigns variables to calculated input
         healthdisplay = (TextView) findViewById(R.id.health);
         entertainmentdisplay = (TextView) findViewById(R.id.entertainment);
         dietdisplay = (TextView) findViewById(R.id.diet);
         householddisplay = (TextView) findViewById(R.id.household);
         recreationdisplay = (TextView) findViewById(R.id.recreation);
         guarenteeddisplay = (TextView) findViewById(R.id.guarenteed);
-
-        healthdisplay.setText("Health spending: " + Double.toString(adaptedhealth));
-        entertainmentdisplay.setText("Entertainment spending: " + Double.toString(adaptedentertainment));
-        dietdisplay.setText("Diet spending: " + Double.toString(adapteddiet));
-        householddisplay.setText("Household spending: " + Double.toString(adaptedhousehold));
-        recreationdisplay.setText("recreational spending: " + Double.toString(adaptedrecreation));
-        guarenteeddisplay.setText("Guarenteed spending: " + Double.toString(adaptedguarenteed));
-
-
-
-
+        //sets the display of the form to the computed output
+        healthdisplay.setText("Health spending: " + String.format("%.2f", adaptedhealth));
+        entertainmentdisplay.setText("Entertainment spending: " + String.format("%.2f", adaptedentertainment));
+        dietdisplay.setText("Diet spending: " + String.format("%.2f", adapteddiet));
+        householddisplay.setText("Household spending: " + String.format("%.2f", adaptedhousehold));
+        recreationdisplay.setText("Recreational spending: " + String.format("%.2f", adaptedrecreation));
+        guarenteeddisplay.setText("Guarenteed spending: " + String.format("%.2f", adaptedguarenteed));
+        //sets page title to "budget"
+        getSupportActionBar().setTitle("Budget Output");
 
     }
 
@@ -169,29 +163,29 @@ public class Budget_Output extends AppCompatActivity {
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-//            case R.id.action_health:
-//                Intent b = new Intent( Budget_Output.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
-//                startActivity( b );
-//                mDrawerLayout.closeDrawer( mNavigationView );
-//                break;
-//
-//            case R.id.action_budget:
-//                Intent c = new Intent( Budget_Output.this, Budget.class ); // Change "test_activity.class" to whatever class this should link to
-//                startActivity( c );
-//                mDrawerLayout.closeDrawer( mNavigationView );
-//                break;
-//
-//            case R.id.action_goals:
-//                Intent d = new Intent( Budget_Output.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
-//                startActivity( d );
-//                mDrawerLayout.closeDrawer( mNavigationView );
-//                break;
-//
-//            case R.id.action_settings:
-//                Intent e = new Intent( Budget_Output.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
-//                startActivity( e );
-//                mDrawerLayout.closeDrawer( mNavigationView );
-//                break;
+            case R.id.action_health:
+                Intent b = new Intent( Budget_Output.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity( b );
+                mDrawerLayout.closeDrawer( mNavigationView );
+                break;
+
+            case R.id.action_budget:
+                Intent c = new Intent( Budget_Output.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity( c );
+                mDrawerLayout.closeDrawer( mNavigationView );
+                break;
+
+            case R.id.action_goals:
+                Intent d = new Intent( Budget_Output.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity( d );
+                mDrawerLayout.closeDrawer( mNavigationView );
+                break;
+
+            case R.id.action_settings:
+                Intent e = new Intent( Budget_Output.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity( e );
+                mDrawerLayout.closeDrawer( mNavigationView );
+                break;
         }
     }
 }

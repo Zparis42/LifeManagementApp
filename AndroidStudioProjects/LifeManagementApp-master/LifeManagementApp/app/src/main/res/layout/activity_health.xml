@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/nav_drawer"
-    tools:context=".Homescreen">
+    tools:context=".Health">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,21 +14,20 @@
             android:id="@+id/my_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#ff76caff"
+            android:background="?attr/colorPrimary"
             android:elevation="4dp"
             android:navigationIcon="@mipmap/ic_menu_black_24dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        <!--<Button-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="Notification Test"-->
-            <!--android:id="@+id/notifyButton"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:onClick="addNotification"/>-->
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Form Test"
+            android:id="@+id/button_med"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="newMedication"/>
 
     </RelativeLayout>
 

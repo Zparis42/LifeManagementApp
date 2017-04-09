@@ -3,8 +3,6 @@ package com.lifemanagementapp.lifemanagementapp;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,22 +14,35 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
 
 
-public class Homescreen extends AppCompatActivity {
+public class Health extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     private NavigationView mNavigationView;
 
+    public medNode[] medList;
+
+    public class medNode {
+
+        private String name;
+        private String desc;
+
+        private String getName( ) {
+            return name;
+        }
+
+        private String getDesc( ) {
+            return desc;
+        }
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homescreen);
+        setContentView(R.layout.activity_health);
 
         // Creates new toolbar and sets it as the active action bar
         Toolbar toolbar = (Toolbar) findViewById( R.id.my_toolbar );
@@ -47,40 +58,20 @@ public class Homescreen extends AppCompatActivity {
         mNavigationView.setItemIconTintList(null);
 
         // Enables the navigation button on the toolbar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled( true );
     }
 
     private void selectItem(int position) {
         switch(position) {
             case 1:
-                Intent a = new Intent(Homescreen.this, test_activity.class);
+                Intent a = new Intent(Health.this, test_activity.class);
                 startActivity(a);
                 break;
             case 2:
-                Intent b = new Intent(Homescreen.this, test_activity.class);
+                Intent b = new Intent(Health.this, test_activity.class);
                 startActivity(b);
                 break;
             default:
-        }
-    }
-
-    // Inflate the menu; this adds items to the action bar if it is present
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_homescreen, menu);
-        return true;
-    }
-
-    // Opens navigation drawer if navigation button is clicked
-    @Override
-    public boolean onOptionsItemSelected( MenuItem item ) {
-
-        if(mDrawerToggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        else {
-            return true;
         }
     }
 
@@ -90,10 +81,10 @@ public class Homescreen extends AppCompatActivity {
         // These three are NECESSARY for each notification, do not delete
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 // Icon for the notification
-                .setSmallIcon(R.mipmap.ic_launcher)
-                // Title of notification
+                .setSmallIcon(R.mipmap.ic_local_hospital_black_24dp)
+                        // Title of notification
                 .setContentTitle("Test notification")
-                // Text displayed under the title
+                        // Text displayed under the title
                 .setContentText("Finally working");
 
         Intent intent = new Intent(this, Homescreen.class);
@@ -113,43 +104,58 @@ public class Homescreen extends AppCompatActivity {
 
         switch ( item.getItemId( ) ) {
             case R.id.action_calendar:
-                Intent a = new Intent( Homescreen.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
-                startActivity( a );
+                Intent a = new Intent( Health.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity(a);
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_health:
-                Intent b = new Intent( Homescreen.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent b = new Intent( Health.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( b );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_budget:
-                Intent c = new Intent( Homescreen.this, Budget.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent c = new Intent( Health.this, Budget.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( c );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_goals:
-                Intent d = new Intent( Homescreen.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent d = new Intent( Health.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( d );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_settings:
-                Intent e = new Intent( Homescreen.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent e = new Intent( Health.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( e );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
-            //
-            //
-            //
-            // Debug, remove before shipping
-            case R.id.action_debug_event_form:
-                Intent f = new Intent( Homescreen.this, Schedule_form.class ); // Change "test_activity.class" to whatever class this should link to
-                startActivity( f );
-                mDrawerLayout.closeDrawer( mNavigationView );
-                break;
+        }
+    }
+
+    public void newMedication( View view ) {
+        Intent newMed = new Intent( Health.this, Health_Form.class );
+        startActivity( newMed );
+    }
+
+    // Inflate the menu; this adds items to the action bar if it is present
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_homescreen, menu);
+        return true;
+    }
+
+    // Opens navigation drawer if navigation button is clicked
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item ) {
+
+        if(mDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        else {
+            return true;
         }
     }
 }

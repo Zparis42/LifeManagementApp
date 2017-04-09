@@ -34,8 +34,8 @@ public class Budget extends AppCompatActivity{
     int diettt;
     int householddd;
     int recreationnn;
-    int gaurenteeddd;
-    int incomeee;
+    float gaurenteeddd;
+    float incomeee;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     private NavigationView mNavigationView;
@@ -62,7 +62,7 @@ public class Budget extends AppCompatActivity{
 
         // Enables the navigation button on the toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        getSupportActionBar().setTitle("Budget");
 
     }
 
@@ -91,11 +91,11 @@ public class Budget extends AppCompatActivity{
         recreationnn = recreationn;
 
         String guarenteed = ((EditText)findViewById(R.id.gaurenteed)).getText().toString();
-        int guarenteedd = Integer.parseInt(guarenteed);
+        float guarenteedd = Float.parseFloat(guarenteed);
         gaurenteeddd = guarenteedd;
 
         String income = ((EditText)findViewById(R.id.income)).getText().toString();
-        int incomee = Integer.parseInt(income);
+        float incomee = Float.parseFloat(income);
         incomeee = incomee;
 
         Intent myIntent = new Intent(Budget.this, Budget_Output.class);
@@ -149,29 +149,29 @@ public class Budget extends AppCompatActivity{
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-//            case R.id.action_health:
-//                Intent b = new Intent( Budget.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
-//                startActivity( b );
-//                mDrawerLayout.closeDrawer( mNavigationView );
-//                break;
-//
-//            case R.id.action_budget:
-//                Intent c = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
-//                startActivity( c );
-//                mDrawerLayout.closeDrawer( mNavigationView );
-//                break;
-//
-//            case R.id.action_goals:
-//                Intent d = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
-//                startActivity( d );
-//                mDrawerLayout.closeDrawer( mNavigationView );
-//                break;
-//
-//            case R.id.action_settings:
-//                Intent e = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
-//                startActivity( e );
-//                mDrawerLayout.closeDrawer( mNavigationView );
-//                break;
+            case R.id.action_health:
+                Intent b = new Intent( Budget.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity( b );
+                mDrawerLayout.closeDrawer( mNavigationView );
+                break;
+
+            case R.id.action_budget:
+                Intent c = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity( c );
+                mDrawerLayout.closeDrawer( mNavigationView );
+                break;
+
+            case R.id.action_goals:
+                Intent d = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity( d );
+                mDrawerLayout.closeDrawer( mNavigationView );
+                break;
+
+            case R.id.action_settings:
+                Intent e = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                startActivity( e );
+                mDrawerLayout.closeDrawer( mNavigationView );
+                break;
         }
     }
 

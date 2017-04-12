@@ -40,8 +40,8 @@ public class Homescreen extends AppCompatActivity {
         mNavigationView = (NavigationView) findViewById( R.id.nav_view );
         mDrawerLayout = (DrawerLayout) findViewById( R.id.nav_drawer );
         mDrawerToggle = new ActionBarDrawerToggle( this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close );
-        mDrawerLayout.setDrawerListener( mDrawerToggle );
-        mDrawerToggle.syncState( );
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        mDrawerToggle.syncState();
 
         // Removes tint from menu items
         mNavigationView.setItemIconTintList(null);
@@ -49,21 +49,14 @@ public class Homescreen extends AppCompatActivity {
         // Enables the navigation button on the toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // Refresh Nav Menu
+        refreshNavMenu( );
+
     }
 
-    private void selectItem(int position) {
-        switch(position) {
-            case 1:
-                Intent a = new Intent(Homescreen.this, test_activity.class);
-                startActivity(a);
-                break;
-            case 2:
-                Intent b = new Intent(Homescreen.this, test_activity.class);
-                startActivity(b);
-                break;
-            default:
-        }
-    }
+   public void refreshNavMenu(  ) {
+       this.invalidateOptionsMenu( );
+   }
 
     // Inflate the menu; this adds items to the action bar if it is present
     @Override
@@ -137,9 +130,10 @@ public class Homescreen extends AppCompatActivity {
                 break;
 
             case R.id.action_settings:
-                Intent e = new Intent( Homescreen.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent e = new Intent( Homescreen.this, Settings.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( e );
                 mDrawerLayout.closeDrawer( mNavigationView );
+                finish( );
                 break;
         }
     }

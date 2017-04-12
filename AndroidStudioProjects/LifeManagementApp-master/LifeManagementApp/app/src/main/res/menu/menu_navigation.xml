@@ -1,6 +1,14 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_menu"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android.support.v7.appcompat="http://schemas.android.com/tools" >
+
+    <item
+        android:id="@+id/action_homescreen"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Homescreen"
+        android:onClick="onNavMenuItemClick" />
 
     <item
         android:id="@+id/action_calendar"

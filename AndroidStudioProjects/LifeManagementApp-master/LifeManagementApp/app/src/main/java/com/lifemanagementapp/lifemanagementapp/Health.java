@@ -16,6 +16,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -27,6 +30,7 @@ public class Health extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     private NavigationView mNavigationView;
+    private ListView mListView;
 
     public ArrayList<MedNode> medList = new ArrayList<MedNode>( );
 
@@ -62,6 +66,8 @@ public class Health extends AppCompatActivity {
         mNavigationView = (NavigationView) findViewById( R.id.nav_view );
         mDrawerLayout = (DrawerLayout) findViewById( R.id.nav_drawer );
         mDrawerToggle = new ActionBarDrawerToggle( this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close );
+        mListView = (ListView) findViewById( R.id.medicationList );
+        
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
 
@@ -79,7 +85,14 @@ public class Health extends AppCompatActivity {
         if( in != null ) {
             String name = in.getStringExtra( "name" );
             String desc = in.getStringExtra( "desc" );
-            medList.add( new MedNode( name, desc ) );
+            MedNode newNode = new MedNode( name, desc );
+            medList.add( newNode );
+        }
+
+        if( medList.size( ) > 0 ) {
+            for( int i = 0; i < medList.size( ); i++ ) {
+
+            }
         }
     }
 

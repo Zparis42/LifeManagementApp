@@ -20,6 +20,14 @@
             android:name=".test_activity"
             android:label="@string/title_activity_test_activity" >
         </activity>
+        <activity
+            android:name=".GoalActivity"
+            android:label="@string/title_activity_goal" >
+        </activity>
+        <activity
+            android:name=".newGoal"
+            android:label="@string/title_activity_new_goal" >
+        </activity>
     </application>
 
 </manifest>

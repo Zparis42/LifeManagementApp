@@ -11,5 +11,8 @@
     <string name="action_health">Health</string>
     <string name="action_goals">Goals</string>
     <string name="title_activity_test_activity">test_activity</string>
+    <string name="title_activity_goal">GoalActivity</string>
+    <string name="title_activity_new_goal">newGoal</string>
+    <string name="new_goal_name">What is your next goal?</string>
 
 </resources>

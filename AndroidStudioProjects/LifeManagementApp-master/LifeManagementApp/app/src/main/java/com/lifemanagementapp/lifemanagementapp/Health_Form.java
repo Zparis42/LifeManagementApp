@@ -1,6 +1,7 @@
 package com.lifemanagementapp.lifemanagementapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TimePicker;
 
 
 public class Health_Form extends AppCompatActivity {
@@ -17,10 +19,30 @@ public class Health_Form extends AppCompatActivity {
 
         EditText name = (EditText) findViewById( R.id.editTextName );
         EditText desc = (EditText) findViewById( R.id.editTextDesc );
+        TimePicker time = (TimePicker) findViewById( R.id.timePicker );
 
-        Intent intent = new Intent( view.getContext( ), Health.class );
+        String sendName = name.getText( ).toString( );
+        String sendDesc = desc.getText( ).toString( );
+        String sendTime = time.getCurrentHour( ).toString( ) + ":";
+        if( time.getCurrentMinute( ) < 10 ) {
+            sendTime += "0" + time.getCurrentMinute( ).toString( );
+        } else {
+            sendTime += time.getCurrentMinute( ).toString( );
+        }
+
+        String newString = sendName + "\n" + sendDesc + "\n" + sendTime;
+
+        // Put data into Shared Preferences
+        SharedPreferences healthStorage = getSharedPreferences( Health.prefFileName, MODE_PRIVATE );
+        int size = healthStorage.getInt( "HealthSize", 0 );
+        SharedPreferences.Editor healthEdit = getSharedPreferences( Health.prefFileName, MODE_PRIVATE ).edit( );
+        healthEdit.putString("pos_" + size, newString);
+        healthEdit.putInt("HealthSize", size + 1);
+        healthEdit.apply();
+
+        Intent intent = new Intent( this, Health.class );
         startActivity( intent );
-
+        finish( );
     }
 
     @Override
@@ -61,4 +83,6 @@ public class Health_Form extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

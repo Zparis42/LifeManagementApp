@@ -64,7 +64,8 @@
         android:text="Submit"
         android:id="@+id/newMedSubmit"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="submit"/>
 
     <TimePicker
         android:layout_width="wrap_content"
@@ -72,6 +73,5 @@
         android:id="@+id/timePicker"
         android:layout_below="@+id/newMedTime"
         android:layout_centerHorizontal="true" />
-
 
 </RelativeLayout>

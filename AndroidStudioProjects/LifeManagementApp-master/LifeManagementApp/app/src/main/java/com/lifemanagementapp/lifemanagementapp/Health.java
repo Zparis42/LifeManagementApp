@@ -104,13 +104,13 @@ public class Health extends AppCompatActivity {
 
         switch ( item.getItemId( ) ) {
             case R.id.action_calendar:
-                Intent a = new Intent( Health.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent a = new Intent( Health.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity(a);
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_health:
-                Intent b = new Intent( Health.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent b = new Intent( Health.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( b );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;

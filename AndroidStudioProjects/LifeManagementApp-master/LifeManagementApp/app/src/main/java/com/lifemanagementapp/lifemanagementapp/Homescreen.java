@@ -113,7 +113,7 @@ public class Homescreen extends AppCompatActivity {
 
         switch ( item.getItemId( ) ) {
             case R.id.action_calendar:
-                Intent a = new Intent( Homescreen.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent a = new Intent( Homescreen.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( a );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
@@ -131,13 +131,13 @@ public class Homescreen extends AppCompatActivity {
                 break;
 
             case R.id.action_goals:
-                Intent d = new Intent( Homescreen.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent d = new Intent( Homescreen.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( d );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_settings:
-                Intent e = new Intent( Homescreen.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent e = new Intent( Homescreen.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( e );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;

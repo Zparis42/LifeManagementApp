@@ -21,4 +21,6 @@
     <string name="set_time">Set Time</string>
     <string name="title_activity_schedule_form">Schedule Form</string>
 
+    <string name="action_newMed">Add</string>
+
 </resources>

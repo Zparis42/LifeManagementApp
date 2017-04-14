@@ -46,6 +46,14 @@
             android:name=".Schedule_form"
             android:label="@string/title_activity_schedule_form" >
         </activity>
+        <activity
+            android:name=".GoalActivity"
+            android:label="@string/title_activity_schedule_form" >
+        </activity>
+        <activity
+            android:name=".newGoal"
+            android:label="@string/title_activity_schedule_form" >
+        </activity>
 
     </application>
 

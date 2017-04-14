@@ -11,23 +11,20 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/my_toolbar"
+            android:id="@+id/health_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#ffff4860"
             android:elevation="4dp"
             android:navigationIcon="@mipmap/ic_menu_black_24dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        <Button
+        <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Health Form Test"
-            android:id="@+id/button_med"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:onClick="newMedication"/>
+            android:id="@+id/medicationList" >
+        </ListView>
 
     </RelativeLayout>
 

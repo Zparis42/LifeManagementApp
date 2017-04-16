@@ -19,5 +19,6 @@
     <string name="event_name">Event Name</string>
     <string name="set_time">Set Time</string>
     <string name="title_activity_schedule_form">Schedule Form</string>
+    <string name="title_activity_timeline">Timeline</string>
 
 </resources>

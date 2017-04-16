@@ -36,7 +36,10 @@
             android:name=".Schedule_form"
             android:label="@string/title_activity_schedule_form" >
         </activity>
-
+        <activity
+            android:name=".Timeline"
+            android:label="@string/title_activity_timeline" >
+        </activity>
     </application>
 
 </manifest>

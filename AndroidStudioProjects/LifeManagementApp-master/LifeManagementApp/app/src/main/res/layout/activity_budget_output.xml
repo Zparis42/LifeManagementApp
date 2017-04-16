@@ -15,7 +15,7 @@
             android:id="@+id/my_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/material_deep_teal_200"
             android:elevation="4dp"
             android:navigationIcon="@mipmap/ic_menu_black_24dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
@@ -29,7 +29,8 @@
             android:layout_below="@+id/my_toolbar"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:text="Based on your input, the below values are the amount of money spendable on each section, based on your total income" />
+            android:text="Based on your input, the below values are the amount of money spendable on each section, based on your total income"
+            android:textColor="#ff000000" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -38,7 +39,8 @@
             android:textSize="25dp"
             android:layout_above="@+id/entertainment"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="#ff000000" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -47,7 +49,8 @@
             android:textSize="25dp"
             android:layout_above="@+id/diet"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="#ff000000" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -56,7 +59,8 @@
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:textColor="#ff000000" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -65,7 +69,8 @@
             android:textSize="25dp"
             android:layout_below="@+id/diet"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="#ff000000" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -74,7 +79,8 @@
             android:textSize="25dp"
             android:layout_below="@+id/household"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="#ff000000" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -83,7 +89,8 @@
             android:textSize="25dp"
             android:layout_below="@+id/recreation"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="#ff000000" />
 
         <TextView
             android:layout_width="wrap_content"

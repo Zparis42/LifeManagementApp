@@ -4,36 +4,40 @@
 
     <item
         android:id="@+id/action_calendar"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_today_black_24dp"
         android:title="@string/action_calendar"
         android:onClick="onNavMenuItemClick" />
 
     <item android:id="@+id/action_health"
           android:title="@string/action_health"
-          android:icon="@mipmap/ic_launcher"
+          android:icon="@mipmap/ic_local_hospital_black_24dp"
           android:onClick="onNavMenuItemClick" />
 
     <item android:id="@+id/action_budget"
           android:title="@string/action_budget"
-          android:icon="@mipmap/ic_launcher"
+          android:icon="@mipmap/ic_local_atm_black_24dp"
           android:onClick="onNavMenuItemClick" />
 
     <item android:id="@+id/action_goals"
           android:title="@string/action_goals"
-          android:icon="@mipmap/ic_launcher"
+          android:icon="@mipmap/ic_directions_run_black_24dp"
           android:onClick="onNavMenuItemClick" />
 
-    <item android:id="@+id/action_settings"
-          android:title="@string/action_settings"
-          android:icon="@mipmap/ic_launcher"
-          android:onClick="onNavMenuItemClick" />
-
+    <!--<item android:id="@+id/action_settings"-->
+          <!--android:title="@string/action_settings"-->
+          <!--android:icon="@mipmap/ic_settings_black_24dp"-->
+          <!--android:onClick="onNavMenuItemClick" />-->
+    <item
+        android:id="@+id/action_homescreen"
+        android:icon="@mipmap/ic_today_black_24dp"
+        android:title="@string/action_homescreen"
+        android:onClick="onNavMenuItemClick" />
     <!-- Debug, remove before shipping
 
     -->
-    <item android:id="@+id/action_debug_event_form"
-        android:title="DEBUG: Schedule Form"
-        android:icon="@mipmap/ic_launcher"
-        android:onClick="onNavMenuItemClick" />
+    <!--<item android:id="@+id/action_debug_event_form"-->
+        <!--android:title="DEBUG: Schedule Form"-->
+        <!--android:icon="@mipmap/ic_launcher"-->
+        <!--android:onClick="onNavMenuItemClick" />-->
 
 </menu>

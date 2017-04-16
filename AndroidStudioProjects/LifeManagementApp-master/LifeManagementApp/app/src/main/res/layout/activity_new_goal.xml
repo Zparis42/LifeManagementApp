@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.lifemanagementapp.lifemanagementapp.newGoal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/EditGoalName"
+            android:layout_height="wrap_content"
+            android:hint="      What is your next goal?  "
+            android:lines="2"
+            android:layout_width="fill_parent"
+            android:background="@color/orange">
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="When should it be done?"
+            android:id="@+id/dueDate"
+            android:layout_gravity="center_horizontal" />
+
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:id="@+id/datePicker"
+            android:datePickerMode="spinner"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Priority"
+            android:id="@+id/priority"
+            android:layout_gravity="center_horizontal" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_gravity="center_horizontal"
+           />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Create New Goal   "
+            android:id="@+id/newGoalButton"
+            android:layout_gravity="center_horizontal"
+            android:onClick="createNewGoal"
+            android:background="@color/orange"/>
+
+        <Button
+            android:textSize="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="   Cancel   "
+            android:id="@+id/cancelButton"
+            android:onClick="cancelForm"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/darkorange"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

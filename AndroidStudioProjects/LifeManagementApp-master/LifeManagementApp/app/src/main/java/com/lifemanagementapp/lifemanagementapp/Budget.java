@@ -144,7 +144,7 @@ public class Budget extends AppCompatActivity{
 
         switch ( item.getItemId( ) ) {
             case R.id.action_calendar:
-                Intent a = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent a = new Intent( Budget.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( a );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
@@ -155,19 +155,19 @@ public class Budget extends AppCompatActivity{
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-            case R.id.action_budget:
-                Intent c = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
-                startActivity( c );
-                mDrawerLayout.closeDrawer( mNavigationView );
-                break;
+//            case R.id.action_budget:
+//                Intent c = new Intent( Budget.this, Budget.class ); // Change "test_activity.class" to whatever class this should link to
+//                startActivity( c );
+//                mDrawerLayout.closeDrawer( mNavigationView );
+//                break;
 
             case R.id.action_goals:
-                Intent d = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent d = new Intent( Budget.this, GoalActivity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( d );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-            case R.id.action_settings:
+            case R.id.action_homescreen:
                 Intent e = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( e );
 
@@ -175,12 +175,12 @@ public class Budget extends AppCompatActivity{
             //
             //
             // Debug, remove before shipping
-            case R.id.action_debug_event_form:
-                Intent f = new Intent( Budget.this, Schedule_form.class ); // Change "test_activity.class" to whatever class this should link to
-                startActivity( f );
-
-                mDrawerLayout.closeDrawer( mNavigationView );
-                break;
+//            case R.id.action_debug_event_form:
+//                Intent f = new Intent( Budget.this, Schedule_form.class ); // Change "test_activity.class" to whatever class this should link to
+//                startActivity( f );
+//
+//                mDrawerLayout.closeDrawer( mNavigationView );
+//                break;
         }
     }
 

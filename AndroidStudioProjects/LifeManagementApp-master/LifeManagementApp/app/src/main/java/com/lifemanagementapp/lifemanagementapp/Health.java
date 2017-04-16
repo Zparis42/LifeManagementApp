@@ -115,36 +115,36 @@ public class Health extends AppCompatActivity {
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-            case R.id.action_health:
+            case R.id.action_homescreen:
                 Intent b = new Intent( Health.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( b );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_budget:
-                Intent c = new Intent( Health.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent c = new Intent( Health.this, Budget.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( c );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_goals:
-                Intent d = new Intent( Health.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent d = new Intent( Health.this, GoalActivity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( d );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-            case R.id.action_settings:
-                Intent e = new Intent( Health.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
-                startActivity( e );
-                mDrawerLayout.closeDrawer( mNavigationView );
-                break;
+//            case R.id.action_settings:
+//                Intent e = new Intent( Health.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+//                startActivity( e );
+//                mDrawerLayout.closeDrawer( mNavigationView );
+//                break;
         }
     }
 
     public void newMedication( MenuItem item ) {
         Intent newMed = new Intent( Health.this, Health_Form.class );
         startActivity(newMed);
-        finish( );
+        finish();
     }
 
     // Inflate the menu; this adds items to the action bar if it is present

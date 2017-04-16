@@ -158,7 +158,7 @@ public class Budget_Output extends AppCompatActivity {
 
         switch ( item.getItemId( ) ) {
             case R.id.action_calendar:
-                Intent a = new Intent( Budget_Output.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent a = new Intent( Budget_Output.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( a );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
@@ -170,19 +170,19 @@ public class Budget_Output extends AppCompatActivity {
                 break;
 
             case R.id.action_budget:
-                Intent c = new Intent( Budget_Output.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent c = new Intent( Budget_Output.this, Budget.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( c );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_goals:
-                Intent d = new Intent( Budget_Output.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent d = new Intent( Budget_Output.this, GoalActivity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( d );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-            case R.id.action_settings:
-                Intent e = new Intent( Budget_Output.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+            case R.id.action_homescreen:
+                Intent e = new Intent( Budget_Output.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( e );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;

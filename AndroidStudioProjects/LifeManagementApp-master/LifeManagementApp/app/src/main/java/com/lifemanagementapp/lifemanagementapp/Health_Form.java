@@ -37,7 +37,7 @@ public class Health_Form extends AppCompatActivity {
         int size = healthStorage.getInt( "HealthSize", 0 );
         SharedPreferences.Editor healthEdit = getSharedPreferences( Health.prefFileName, MODE_PRIVATE ).edit( );
         healthEdit.putString("pos_" + size, newString);
-        healthEdit.putInt("HealthSize", size + 1);
+        healthEdit.putInt("HealthSize", size + 1 );
         healthEdit.apply();
 
         Intent intent = new Intent( this, Health.class );

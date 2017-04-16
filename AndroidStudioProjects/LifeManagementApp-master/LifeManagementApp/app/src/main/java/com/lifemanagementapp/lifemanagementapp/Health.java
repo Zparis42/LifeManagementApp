@@ -60,23 +60,21 @@ public class Health extends AppCompatActivity {
         mDrawerToggle.syncState();
 
         // Removes tint from menu items
-        mNavigationView.setItemIconTintList(null);
+        mNavigationView.setItemIconTintList( null );
 
-        mListView.setAdapter( null );
+        // Enables the navigation button on the toolbar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Get data from Shared Preferences
         SharedPreferences healthStorage = getSharedPreferences( Health.prefFileName, MODE_PRIVATE );
         int size = healthStorage.getInt( "HealthSize", 0 );
         for( int i = 0; i < size; i++ ) {
-            medList.add( i, healthStorage.getString( "pos_" + i, null ) );
+            medList.add( i, healthStorage.getString( "pos_" + i, "This shouldn't show up." ) );
         }
 
         // Set medAdapter and fill ListView
         medAdapter = new ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, medList );
         mListView.setAdapter( medAdapter );
-        for( int i = 0; i < size; i++ ) {
-            medAdapter.add( medList.get( i ) );
-        }
         medAdapter.notifyDataSetChanged( );
 
     }

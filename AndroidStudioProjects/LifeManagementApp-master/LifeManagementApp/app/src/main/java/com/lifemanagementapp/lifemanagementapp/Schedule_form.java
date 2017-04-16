@@ -88,7 +88,7 @@ public class Schedule_form extends AppCompatActivity implements TimePickerFragme
         long newRowID = db.insert(EventDataContract.EventEntry.TABLE_NAME, null, values);
 
 
-
+        /*
         // Test code to see if writing and reading work
         db = edHelper.getReadableDatabase();
         // Projection of what information will be used
@@ -140,7 +140,7 @@ public class Schedule_form extends AppCompatActivity implements TimePickerFragme
         System.out.println(cursor.getInt(cursor.getColumnIndexOrThrow(EventDataContract.EventEntry.COLUMN_NAME_END_HOUR)));
         System.out.println(cursor.getInt(cursor.getColumnIndexOrThrow(EventDataContract.EventEntry.COLUMN_NAME_END_MINUTE)));
         cursor.close();
-
+        */
         finish();
     }
 

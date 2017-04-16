@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
 public class Timeline extends ActionBarActivity {
@@ -37,7 +38,6 @@ public class Timeline extends ActionBarActivity {
         //ArrayAdapter<String> myarrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listView);
        // listView.setAdapter(myarrayAdapter);
         //listView.setTextFilterEnabled(true);
-
         int []Date = getIntent().getIntArrayExtra("Date");
         Month = Date[0];
         Day = Date[1];

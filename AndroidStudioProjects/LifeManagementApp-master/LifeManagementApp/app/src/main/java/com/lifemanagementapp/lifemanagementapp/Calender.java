@@ -311,14 +311,14 @@ public class Calender extends ActionBarActivity {
     public void onNavMenuItemClick( MenuItem item ) {
 
         switch ( item.getItemId( ) ) {
-            case R.id.action_calendar:
-                Intent a = new Intent( Calender.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
-                startActivity( a );
-                mDrawerLayout.closeDrawer( mNavigationView );
-                break;
+//            case R.id.action_calendar:
+//                Intent a = new Intent( Calender.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
+//                startActivity( a );
+//                mDrawerLayout.closeDrawer( mNavigationView );
+//                break;
 
             case R.id.action_health:
-                Intent b = new Intent( Calender.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent b = new Intent( Calender.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( b );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
@@ -330,13 +330,13 @@ public class Calender extends ActionBarActivity {
                 break;
 
             case R.id.action_goals:
-                Intent d = new Intent( Calender.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent d = new Intent( Calender.this, GoalActivity.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( d );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-            case R.id.action_settings:
-                Intent e = new Intent( Calender.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+            case R.id.action_homescreen:
+                Intent e = new Intent( Calender.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( e );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;

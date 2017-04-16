@@ -113,7 +113,7 @@ public class Homescreen extends AppCompatActivity {
 
         switch ( item.getItemId( ) ) {
             case R.id.action_calendar:
-                Intent a = new Intent( Homescreen.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent a = new Intent( Homescreen.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( a );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
@@ -136,20 +136,20 @@ public class Homescreen extends AppCompatActivity {
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-            case R.id.action_settings:
-                Intent e = new Intent( Homescreen.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
-                startActivity( e );
-                mDrawerLayout.closeDrawer( mNavigationView );
-                break;
+//            case R.id.action_settings:
+//                Intent e = new Intent( Homescreen.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+//                startActivity( e );
+//                mDrawerLayout.closeDrawer( mNavigationView );
+//                break;
             //
             //
             //
             // Debug, remove before shipping
-            case R.id.action_debug_event_form:
-                Intent f = new Intent( Homescreen.this, Schedule_form.class ); // Change "test_activity.class" to whatever class this should link to
-                startActivity( f );
-                mDrawerLayout.closeDrawer( mNavigationView );
-                break;
+//            case R.id.action_debug_event_form:
+//                Intent f = new Intent( Homescreen.this, Schedule_form.class ); // Change "test_activity.class" to whatever class this should link to
+//                startActivity( f );
+//                mDrawerLayout.closeDrawer( mNavigationView );
+//                break;
         }
     }
 }

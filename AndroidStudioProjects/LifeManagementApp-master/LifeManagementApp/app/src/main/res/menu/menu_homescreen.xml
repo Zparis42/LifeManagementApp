@@ -4,9 +4,9 @@
     android.support.v7.appcompat:navigationIcon="@mipmap/ic_menu_black_24dp">
 
     <!-- Settings, should always be in the overflow -->
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        app:showAsAction="never"
-        android:onClick="onNavMenuItemClick" />
+    <!--<item android:id="@+id/action_settings"-->
+        <!--android:title="@string/action_settings"-->
+        <!--app:showAsAction="never"-->
+        <!--android:onClick="onNavMenuItemClick" />-->
 
 </menu>

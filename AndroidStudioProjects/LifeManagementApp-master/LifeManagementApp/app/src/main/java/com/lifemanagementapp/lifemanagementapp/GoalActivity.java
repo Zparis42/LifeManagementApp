@@ -120,36 +120,36 @@ public class GoalActivity extends AppCompatActivity {
 
         switch ( item.getItemId( ) ) {
             case R.id.action_calendar:
-                Intent a = new Intent( GoalActivity.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent a = new Intent( GoalActivity.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( a );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_health:
-                Intent b = new Intent( GoalActivity.this, test_activity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent b = new Intent( GoalActivity.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( b );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_budget:
-                Intent c = new Intent( GoalActivity.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent c = new Intent( GoalActivity.this, Budget.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( c );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-            case R.id.action_goals:
+            case R.id.action_homescreen:
                 Intent d = new Intent( GoalActivity.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( d );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
-            case R.id.action_settings:
-                Intent e = new Intent( GoalActivity.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
-                startActivity( e );
+//            case R.id.action_settings:
+//                Intent e = new Intent( GoalActivity.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+//                startActivity( e );
 
 
-                mDrawerLayout.closeDrawer( mNavigationView );
-                break;
+//                mDrawerLayout.closeDrawer( mNavigationView );
+//                break;
         }
     }
 

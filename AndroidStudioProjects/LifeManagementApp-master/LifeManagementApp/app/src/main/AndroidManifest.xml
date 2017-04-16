@@ -58,6 +58,10 @@
             android:name=".newGoal"
             android:label="@string/title_activity_schedule_form" >
         </activity>
+        <activity
+            android:name=".Calender"
+            android:label="@string/title_activity_calender" >
+        </activity>
 
     </application>
 

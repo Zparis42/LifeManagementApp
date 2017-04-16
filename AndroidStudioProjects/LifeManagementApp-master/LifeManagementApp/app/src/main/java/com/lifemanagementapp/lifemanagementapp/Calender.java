@@ -283,22 +283,6 @@ public class Calender extends ActionBarActivity {
         return true;
     }
 
-///////////////////////////////////////////////POTENTIAL PROBLEM/////////////////////
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-
-        return super.onOptionsItemSelected(item);
-    }
-/////////////////////////////////////////////////////////////////////////////////////
     public void onClick(View v) {
 
         //Your Logic
@@ -360,11 +344,11 @@ public class Calender extends ActionBarActivity {
             //
             //
             // Debug, remove before shipping
-            case R.id.action_debug_event_form:
+            /*case R.id.action_debug_event_form:
                 Intent f = new Intent( Calender.this, Schedule_form.class ); // Change "test_activity.class" to whatever class this should link to
                 startActivity( f );
                 mDrawerLayout.closeDrawer( mNavigationView );
-                break;
+                break;*/
         }
     }
     void addToView(RelativeLayout view, String text,int id)

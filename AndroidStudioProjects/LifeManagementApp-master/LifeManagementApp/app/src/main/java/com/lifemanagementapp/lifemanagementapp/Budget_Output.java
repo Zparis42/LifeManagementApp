@@ -124,7 +124,7 @@ public class Budget_Output extends AppCompatActivity {
         dietdisplay.setText("Diet spending: " + String.format("%.2f", adapteddiet));
         householddisplay.setText("Household spending: " + String.format("%.2f", adaptedhousehold));
         recreationdisplay.setText("Recreational spending: " + String.format("%.2f", adaptedrecreation));
-        guarenteeddisplay.setText("Guarenteed spending: " + String.format("%.2f", adaptedguarenteed));
+        guarenteeddisplay.setText("Guaranteed spending: " + String.format("%.2f", adaptedguarenteed));
         //sets page title to "budget"
         getSupportActionBar().setTitle("Budget Output");
 

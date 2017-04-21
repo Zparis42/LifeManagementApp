@@ -66,6 +66,7 @@ public class Budget extends AppCompatActivity{
 
     }
 
+    
     public void buttonOnClick(View v){
         //when the button on the budget form is clicked, take the user input from all boxes
         //then assigned the class level integers to that input
@@ -77,15 +78,15 @@ public class Budget extends AppCompatActivity{
         String entertainment = ((EditText)findViewById(R.id.entertainment)).getText().toString();
         int entertainmentt =  Integer.parseInt(entertainment);
         entertainmenttt = entertainmentt;
-
+        /////////////////
         String diet = ((EditText)findViewById(R.id.diet)).getText().toString();
-        int diett = Integer.parseInt(health);
+        int diett = Integer.parseInt(diet);
         diettt = diett;
 
         String household = ((EditText)findViewById(R.id.household)).getText().toString();
-        int householdd = Integer.parseInt(health);
+        int householdd = Integer.parseInt(household);
         householddd = householdd;
-
+        /////////////////////
         String recreation = ((EditText)findViewById(R.id.recreation)).getText().toString();
         int recreationn = Integer.parseInt(recreation);
         recreationnn = recreationn;
@@ -98,18 +99,29 @@ public class Budget extends AppCompatActivity{
         float incomee = Float.parseFloat(income);
         incomeee = incomee;
 
+        //intents below push this information into the budget output section
         Intent myIntent = new Intent(Budget.this, Budget_Output.class);
         myIntent.putExtra("health", healthhh);
-        //System.out.println("health is )" + healthhh);
         myIntent.putExtra("entertainment", entertainmenttt);
-        //System.out.println("entertainment is " + entertainmenttt);
+
+
+
         myIntent.putExtra("diet", diettt);
-        //System.out.println("diet is " + diettt);
+
+      //  System.out.println("diet issss " + diettt);
+
         myIntent.putExtra("household", householddd);
-        //System.out.println("household is" + householddd);
+
+      //  System.out.println("household issss" + householddd);
+
         myIntent.putExtra("recreation", recreationnn);
-        //System.out.println("recreation is" + recreationnn);
-        myIntent.putExtra("guarenteed", gaurenteeddd);
+
+      //  System.out.println("recreation issss" + recreationnn);
+
+
+
+
+        myIntent.putExtra("guaranteed", gaurenteeddd);
         //System.out.println("guarenteed is" + gaurenteeddd);
         myIntent.putExtra("income", incomeee);
         //System.out.println("income is " + incomeee);
@@ -144,13 +156,13 @@ public class Budget extends AppCompatActivity{
 
         switch ( item.getItemId( ) ) {
             case R.id.action_calendar:
-                Intent a = new Intent( Budget.this, Calender.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent a = new Intent( Budget.this, Calender.class ); //Basic navigation between budget and second .class ection
                 startActivity( a );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_health:
-                Intent b = new Intent( Budget.this, Health.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent b = new Intent( Budget.this, Health.class ); //Basic navigation between budget and second .class ection
                 startActivity( b );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
@@ -162,13 +174,13 @@ public class Budget extends AppCompatActivity{
 //                break;
 
             case R.id.action_goals:
-                Intent d = new Intent( Budget.this, GoalActivity.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent d = new Intent( Budget.this, GoalActivity.class ); //Basic navigation between budget and second .class ection
                 startActivity( d );
                 mDrawerLayout.closeDrawer( mNavigationView );
                 break;
 
             case R.id.action_homescreen:
-                Intent e = new Intent( Budget.this, Homescreen.class ); // Change "test_activity.class" to whatever class this should link to
+                Intent e = new Intent( Budget.this, Homescreen.class ); //Basic navigation between budget and second .class ection
                 startActivity( e );
 
             //

@@ -32,6 +32,8 @@ public class Budget_Output extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private NavigationView mNavigationView;
 
+
+    //the below values are used to obtain information from budget class and evaluate it here
     Intent intent;
     Integer healthvalue;
     Integer entertainmentvalue;
@@ -91,10 +93,14 @@ public class Budget_Output extends AppCompatActivity {
         dietvalue = mine.getIntExtra("diet", 12);
         householdvalue = mine.getIntExtra("household", 12);
         recreationvalue = mine.getIntExtra("recreation", 12);
-        guarenteedvalue = mine.getFloatExtra("guarenteed", 12);
+        guarenteedvalue = mine.getFloatExtra("guaranteed", 12);
         incomevalue = mine.getFloatExtra("income", 12);
+       // System.out.println("diet is" + dietvalue);
+       // System.out.println("household is" + householdvalue);
+       // System.out.println("recreation is" +recreationvalue);
 
 
+        //the below section assigns variables their values based on the formula newthing = thing * (original value/10)
         newbudget = (incomevalue - guarenteedvalue);
         //System.out.println("new budget is " + newbudget);
 
@@ -118,6 +124,7 @@ public class Budget_Output extends AppCompatActivity {
         householddisplay = (TextView) findViewById(R.id.household);
         recreationdisplay = (TextView) findViewById(R.id.recreation);
         guarenteeddisplay = (TextView) findViewById(R.id.guarenteed);
+
         //sets the display of the form to the computed output
         healthdisplay.setText("Health spending: " + String.format("%.2f", adaptedhealth));
         entertainmentdisplay.setText("Entertainment spending: " + String.format("%.2f", adaptedentertainment));

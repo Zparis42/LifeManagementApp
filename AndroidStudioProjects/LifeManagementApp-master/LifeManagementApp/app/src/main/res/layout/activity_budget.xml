@@ -87,7 +87,7 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/recreation"
-            android:hint="Recreation: Exercize related activies"
+            android:hint="Recreation: Exercise related activies"
             android:layout_below="@+id/household"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -98,7 +98,7 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/gaurenteed"
-            android:hint="Enter amount spent on gaurenteed expenses"
+            android:hint="Enter amount spent on guaranteed expenses"
             android:layout_below="@+id/recreation"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
